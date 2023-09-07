@@ -1,0 +1,511 @@
+/* Réinitialisation des styles de base */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles pour le header */
+header {
+    background-color: #6D5440;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+/* Styles pour les sous-menus */
+.submenu {
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+    top: 100%;
+    left: 0;
+    background-color: #6D5440;
+    z-index: 1;
+    white-space: nowrap; 
+    border-top: 3px solid #E29375;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+}
+
+.submenu a {
+    padding: 10px 20px;
+}
+
+/* Afficher les sous-menus au survol */
+header nav ul li:hover .submenu {
+    display: block;
+}
+
+/* Effet de survol pour les liens */
+header nav a:hover {
+    color: #E29375;
+}
+
+
+section {
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.points-forts ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+
+/* Styles pour le pied de page */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #6D5440;
+    color: #fff;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styles spécifiques à la page d'accueil */
+#accueil {
+    background-image: url('../images/cafe-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#accueil h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#accueil p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.points-forts ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+#horaires {
+    background-color: #462e01;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#horaires h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#horaires table {
+    margin: 0 auto;
+}
+
+#horaires td {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+#horaires table,
+#horaires td {
+    border: 2px solid #fff;
+    border-collapse: collapse;
+}
+
+/* Styles pour la section "Notre Histoire" et "Notre Équipe" */
+#histoire, #equipe {
+    background-color: #f7f7f7; 
+    text-align: center;
+}
+
+#histoire .container, #equipe .container {
+    background-color: #F6E8D2;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+#histoire h1, #equipe h1 {
+    font-size: 32px;
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+#histoire p, #equipe p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666; 
+}
+
+/* Styles pour la section de la carte */
+.carte {
+    text-align: center;
+    margin-top: 20px;
+}
+.carte h1{
+    font-size: 30px;
+    color: #6D5440;
+    margin-bottom: 20px;
+}
+
+.menu-section {
+    background-color: #F6E8D2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    color: #6D5440;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.menu-item {
+    display: inline-block;
+    width: calc(25% - 50px);
+    margin: 0 30px 40px;
+    text-align: center;
+    vertical-align: top;
+    position: relative; 
+    overflow: hidden; 
+    transition: transform 0.3s; 
+}
+
+.menu-item:hover {
+    transform: scale(1.05); 
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s; 
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.price {
+    font-weight: bold; 
+    color: #FF6600; 
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Styles pour la section "Événements" et "Actualités" */
+.evenement-section, .actualites-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.evenement-section h1, .actualites-section h1 {
+    font-size: 28px;
+    color: #6D5440;
+    margin-bottom: 20px;
+}
+
+.evenement-item, .actualite-item {
+    margin: 20px;
+    background-color: #F6E8D2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.evenement-item .evenement-content, .actualite-item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.evenement-item img, .actualite-item img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.evenement-item h2, .actualite-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.evenement-item p, .actualite-item p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+/* Styles pour la section "Contact" */
+.contact-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-section h1 {
+    font-size: 28px;
+    color: #6D5440;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.contact-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea,
+.contact-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-section button {
+    display: inline-block;
+    background-color: #6D5440;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #4A3627;
+}
+
+/* Partie responsive*/
+
+/* Pour le header */
+@media (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header nav ul li:hover .submenu {
+        display: block;
+    }
+}
+/* Pour la section Accueil */
+@media (max-width: 768px) {
+    #accueil {
+        padding: 40px 0;
+    }
+
+    #accueil h1 {
+        font-size: 2rem;
+    }
+
+    #accueil p {
+        font-size: 1rem;
+    }
+}
+/* Pour la section Horaires */
+@media (max-width: 768px) {
+    #horaires {
+        padding: 20px 0;
+    }
+
+    #horaires h2 {
+        font-size: 1.5rem;
+    }
+
+    #horaires table {
+        font-size: 1rem;
+    }
+
+    #horaires td {
+        padding: 5px 10px;
+    }
+}
+/* Pour les sections Notre Histoire et Notre Équipe */
+@media (max-width: 768px) {
+    #histoire .container, #equipe .container {
+        padding: 20px;
+    }
+
+    #histoire h1, #equipe h1 {
+        font-size: 24px;
+    }
+
+    #histoire p, #equipe p {
+        font-size: 14px;
+    }
+}
+/* Pour la section Carte */
+@media (max-width: 768px) {
+    .menu-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .menu-item img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .menu-item p {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+}
+/* Pour les sections Événements et Actualités */
+@media (max-width: 768px) {
+    .evenement-item, .actualite-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evenement-item img, .actualite-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .evenement-item h2, .actualite-item h2 {
+        font-size: 20px;
+    }
+
+    .evenement-item p, .actualite-item p {
+        font-size: 14px;
+    }
+}
+/* Pour la section Contact */
+@media (max-width: 768px) {
+    .contact-section form {
+        max-width: 100%;
+    }
+
+    .contact-section label {
+        font-size: 16px;
+    }
+
+    .contact-section input[type="text"],
+    .contact-section input[type="email"],
+    .contact-section textarea,
+    .contact-section select {
+        font-size: 14px;
+    }
+
+    .contact-section button {
+        font-size: 16px;
+    }
+}
